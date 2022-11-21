@@ -16,11 +16,11 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const MyAwesomeLogo = await hre.ethers.getContractFactory("MyAwesomeLogo");
-  const logo = await MyAwesomeLogo.deploy();
+  const Mynft = await hre.ethers.getContractFactory("Mynft");
+  const logo = await Mynft.deploy();
 
   await logo.deployed();
-  console.log("MyAwesomeLogo deployed to:", logo.address);
+  console.log("nft deployed to:", logo.address);
   console.log("owner", await logo.owner());
 }
 

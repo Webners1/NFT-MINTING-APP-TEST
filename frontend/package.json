@@ -1,5 +1,5 @@
 {
-  "name": "nft-app",
+  "name": "nft-test-app",
   "version": "0.1.0",
   "scripts": {
     "build": "npx hardhat compile --network localhost && tsc && vite build",

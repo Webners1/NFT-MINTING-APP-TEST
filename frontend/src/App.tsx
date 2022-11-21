@@ -17,12 +17,10 @@ import { networkName, CHAIN_ID } from "./networkName";
 import { MyAwesomeLogo } from "./types";
 
 export const CONTRACT_DEPLOYED_ADDRESS = "0x1A0d00fBe1Fa3860Dbe1AbC6b9dDC6f6d60Bd2A0";
-const subdomainName = 'polyplace';
 const projectId = '2DZ5SclLb6YJBoDvir5Rh96PAVt';
 const projectSecret = 'd44b2bde4d2bb227907264225330c102';
 const authorization = `Basic ${btoa(`${projectId}:${projectSecret}`)}`;
 
-const endpointBasePath = `https://${subdomainName}.infura-ipfs.io/ipfs/`;
 
 const client = ipfsHttpClient({
   url: 'https://infura-ipfs.io:5001/api/v0',
@@ -42,7 +40,6 @@ async function requestAccount() {
   throw new Error("Missing install Metamask. Please access https://metamask.io/ to install extension on your browser");
 }
 
-const API_URL = import.meta.env.VITE_API_URL;
 
 function NFTApp() {
   const { library, account } = useWeb3React();
